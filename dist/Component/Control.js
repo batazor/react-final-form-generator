@@ -53,26 +53,32 @@ var Control = function (_Component) {
     _this.control = {
       Checkbox: function Checkbox(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Checkbox3.default
+          component: _Checkbox3.default,
+          fullWidth: true
         }, opt));
       },
       Radio: function Radio(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Radio3.default
+          component: _Radio3.default,
+          fullWidth: true
         }, opt));
       },
       TextField: function TextField(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _TextField3.default
+          component: _TextField3.default,
+          fullWidth: true
         }, opt));
       },
       Select: function Select(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Select3.default
+          component: _Select3.default,
+          fullWidth: true
         }, opt));
       },
       Custom: function Custom(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, opt);
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
+          fullWidth: true
+        }, opt));
       }
     };
     return _this;

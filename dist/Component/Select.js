@@ -14,6 +14,10 @@ var _Select = require('@material-ui/core/Select');
 
 var _Select2 = _interopRequireDefault(_Select);
 
+var _MenuItem = require('@material-ui/core/MenuItem');
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -28,12 +32,22 @@ exports.default = function (_ref) {
       meta = _ref.meta,
       rest = _objectWithoutProperties(_ref, ['input', 'meta']);
 
-  return _react2.default.createElement(_Select2.default, _extends({}, rest, {
-    name: name,
-    error: meta.error && meta.touched,
-    inputProps: restInput,
-    onChange: onChange,
-    value: value,
-    checked: !!checked
-  }));
+  return _react2.default.createElement(
+    _Select2.default,
+    _extends({}, rest, {
+      name: name,
+      error: meta.error && meta.touched,
+      inputProps: restInput,
+      onChange: onChange,
+      value: value,
+      checked: !!checked
+    }),
+    rest.option.map(function (item) {
+      return _react2.default.createElement(
+        _MenuItem2.default,
+        { value: item.value },
+        item.label
+      );
+    })
+  );
 };
