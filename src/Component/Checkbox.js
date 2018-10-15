@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from '@material-ui/core/Checkbox'
 
 export default ({
   input: {
