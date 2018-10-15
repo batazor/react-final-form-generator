@@ -1,5 +1,6 @@
 import React from 'react'
 import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
 
 export default ({
   input: {
@@ -16,5 +17,13 @@ export default ({
     onChange={onChange}
     value={value}
     checked={!!checked}
-  />
+  >
+    {
+      rest.option.map(item => (
+        <MenuItem value={item.value}>
+          {item.label}
+        </MenuItem>
+      ))
+    }
+  </Select>
 )

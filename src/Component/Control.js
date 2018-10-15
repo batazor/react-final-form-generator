@@ -14,29 +14,36 @@ class Control extends Component {
       Checkbox: opt => (
         <Field
           component={Checkbox}
+          fullWidth
           {...opt}
         />
       ),
       Radio: opt => (
         <Field
           component={Radio}
+          fullWidth
           {...opt}
         />
       ),
       TextField: opt => (
         <Field
           component={TextField}
+          fullWidth
           {...opt}
         />
       ),
       Select: opt => (
         <Field
           component={Select}
+          fullWidth
           {...opt}
         />
       ),
       Custom: opt => (
-        <Field {...opt} />
+        <Field
+          fullWidth
+          {...opt}
+        />
       ),
     }
   }
