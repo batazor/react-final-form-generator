@@ -1,6 +1,7 @@
 extends: airbnb
 rules:
   semi: ["error", "never"]
+  arrow-parens: 0
   object-property-newline: ["error", { "allowMultiplePropertiesPerLine": true }]
   no-console: ["error", { allow: ["warn", "error", "group", "groupEnd"] }]
   no-multi-assign: "error"

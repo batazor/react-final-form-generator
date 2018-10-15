@@ -93,7 +93,14 @@ var Control = function (_Component) {
 
 
       return fields.map(function (field) {
-        return _this2.control[field.type](_extends({}, field));
+        var isFunction = typeof _this2.control[field.type] === 'function';
+
+        if (isFunction) {
+          return _this2.control[field.type](_extends({}, field));
+        }
+
+        console.error('Not found type:', field.type);
+        return null;
       });
     }
   }]);

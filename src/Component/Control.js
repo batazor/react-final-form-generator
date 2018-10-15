@@ -51,9 +51,16 @@ class Control extends Component {
   render() {
     const { fields } = this.props
 
-    return fields.map(field => (
-      this.control[field.type]({ ...field })
-    ))
+    return fields.map(field => {
+      const isFunction = typeof this.control[field.type] === 'function'
+
+      if (isFunction) {
+        return this.control[field.type]({ ...field })
+      }
+
+      console.error('Not found type:', field.type)
+      return null
+    })
   }
 }
 
