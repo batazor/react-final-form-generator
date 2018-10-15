@@ -1,53 +1,77 @@
-import React, { Component } from 'react'
+import _ from 'lodash'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import classnames from 'classnames'
-import { Form, Field } from 'react-final-form'
+import { Form } from 'react-final-form'
+import Typography from '@material-ui/core/Typography'
 import Control from './Component/Control'
 
-const styles = theme => ({
-  Form: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    flex: 1,
-  },
-  Input: {
-    margin: `${theme.spacing.unit}px 0`,
-  },
-})
-
-class FormGenerator extends Component {
-  static propTypes = {
-    formId: PropTypes.string,
-    // className: PropTypes.string,
-    // style: PropTypes.object,
-    fields: PropTypes.array.isRequired,
-    // pristine: PropTypes.bool.isRequired,
-    // submitting: PropTypes.bool.isRequired,
-    // valid: PropTypes.bool.isRequired,
-    // classes: PropTypes.object.isRequired,
-
-    // I18N: PropTypes.object.isRequired,
-    // currentLocale: PropTypes.string.isRequired,
-
-    handleSubmit: PropTypes.func.isRequired,
-    onChange: PropTypes.func,
-  }
-
-  render() {
+function FormGenerator(props) {
+  return (
     <Form
-      onSubmit={this.props.onSubmit}
-      initialValues={this.props.initialValues}
-      render={({ handleSubmit }) => (
-        <form id={formId} onSubmit={handleSubmit}>
-          <Control
-            fields={this.props.fields}
-          />
-        </form>
+      onSubmit={props.onSubmit}
+      initialValues={props.initialValues}
+      render={({ handleSubmit, submitError }) => (
+        <Fragment>
+          <form
+            id={props.id}
+            className={props.className}
+            onSubmit={handleSubmit}
+          >
+            <Control
+              fields={props.fields}
+            />
+          </form>
+          <div>
+            {
+              _.get(submitError, '_error', []).forEach(error => (
+                <Typography variant="subtitle1" gutterBottom>
+                  We have probelem: {error}
+                </Typography>
+              ))
+            }
+
+            <ul>
+              {
+                submitError && submitError._error.length > 0 && (
+                  <Typography variant="subtitle1" gutterBottom>
+                    We have probelem: {submitError._error.length}
+                  </Typography>
+                )
+              }
+              {
+                _.get(submitError, '_error', []).map((issue, index) => <FormHelperText error key={index}>{issue}</FormHelperText>) // eslint-disable-line
+              }
+            </ul>
+          </div>
+        </Fragment>
       )}
     />
-  }
+  )
+}
+
+FormGenerator.defaultProps = {
+  className: undefined,
+  initialValues: {},
+
+  // onChange: () => {},
+}
+
+FormGenerator.propTypes = {
+  id: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  initialValues: PropTypes.object,
+  // style: PropTypes.object,
+  fields: PropTypes.array.isRequired,
+  // pristine: PropTypes.bool.isRequired,
+  // submitting: PropTypes.bool.isRequired,
+  // valid: PropTypes.bool.isRequired,
+  // classes: PropTypes.object.isRequired,
+
+  // I18N: PropTypes.object.isRequired,
+  // currentLocale: PropTypes.string.isRequired,
+
+  onSubmit: PropTypes.func.isRequired,
+  // onChange: PropTypes.func,
 }
 
 export default FormGenerator

@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from '@material-ui/core/Checkbox';
+import Select from '@material-ui/core/Select'
 
 export default ({
   input: {
@@ -8,11 +8,13 @@ export default ({
   meta,
   ...rest
 }) => (
-  <Checkbox
+  <Select
     {...rest}
     name={name}
-    InputProps={restInput}
+    error={meta.error && meta.touched}
+    inputProps={restInput}
     onChange={onChange}
+    value={value}
     checked={!!checked}
   />
 )

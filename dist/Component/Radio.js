@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Radio = require("@material-ui/core/Radio");
+var _Radio = require('@material-ui/core/Radio');
 
 var _Radio2 = _interopRequireDefault(_Radio);
 
@@ -24,9 +24,9 @@ exports.default = function (_ref) {
       value = _ref$input.value,
       name = _ref$input.name,
       onChange = _ref$input.onChange,
-      restInput = _objectWithoutProperties(_ref$input, ["checked", "value", "name", "onChange"]),
+      restInput = _objectWithoutProperties(_ref$input, ['checked', 'value', 'name', 'onChange']),
       meta = _ref.meta,
-      rest = _objectWithoutProperties(_ref, ["input", "meta"]);
+      rest = _objectWithoutProperties(_ref, ['input', 'meta']);
 
   return _react2.default.createElement(_Radio2.default, _extends({}, rest, {
     name: name,

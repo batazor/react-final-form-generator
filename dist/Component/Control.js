@@ -16,6 +16,8 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _reactFinalForm = require('react-final-form');
+
 var _Checkbox2 = require('./Checkbox');
 
 var _Checkbox3 = _interopRequireDefault(_Checkbox2);
@@ -23,6 +25,14 @@ var _Checkbox3 = _interopRequireDefault(_Checkbox2);
 var _Radio2 = require('./Radio');
 
 var _Radio3 = _interopRequireDefault(_Radio2);
+
+var _TextField2 = require('./TextField');
+
+var _TextField3 = _interopRequireDefault(_TextField2);
+
+var _Select2 = require('./Select');
+
+var _Select3 = _interopRequireDefault(_Select2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42,22 +52,27 @@ var Control = function (_Component) {
 
     _this.control = {
       Checkbox: function Checkbox(opt) {
-        return _react2.default.createElement(Field, _extends({
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
           component: _Checkbox3.default
         }, opt));
       },
       Radio: function Radio(opt) {
-        return _react2.default.createElement(Field, _extends({
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
           component: _Radio3.default
         }, opt));
       },
       TextField: function TextField(opt) {
-        return _react2.default.createElement(Field, _extends({
-          component: _Radio3.default
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
+          component: _TextField3.default
+        }, opt));
+      },
+      Select: function Select(opt) {
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
+          component: _Select3.default
         }, opt));
       },
       Custom: function Custom(opt) {
-        return _react2.default.createElement(Field, opt);
+        return _react2.default.createElement(_reactFinalForm.Field, opt);
       }
     };
     return _this;
@@ -68,15 +83,11 @@ var Control = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props,
-          data = _props.data,
-          onChange = _props.onChange;
+      var fields = this.props.fields;
 
 
-      return this.control[fields.type](_extends({}, data));
-
-      return fields.map(function (item) {
-        return _this2.control[item.type](_extends({}, item));
+      return fields.map(function (field) {
+        return _this2.control[field.type](_extends({}, field));
       });
     }
   }]);
@@ -91,7 +102,7 @@ Control.defaultProps = {
 Control.propTypes = {
   fields: _propTypes2.default.arrayOf(_propTypes2.default.shape({
     name: _propTypes2.default.string.isRequired,
-    type: _propTypes2.default.type.isRequired,
+    type: _propTypes2.default.string.isRequired,
     placeholder: _propTypes2.default.string,
     defaultValue: _propTypes2.default.any
   }))

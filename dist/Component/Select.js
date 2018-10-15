@@ -10,9 +10,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _TextField = require('@material-ui/core/TextField');
+var _Select = require('@material-ui/core/Select');
 
-var _TextField2 = _interopRequireDefault(_TextField);
+var _Select2 = _interopRequireDefault(_Select);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28,12 +28,12 @@ exports.default = function (_ref) {
       meta = _ref.meta,
       rest = _objectWithoutProperties(_ref, ['input', 'meta']);
 
-  return _react2.default.createElement(_TextField2.default, _extends({}, rest, {
+  return _react2.default.createElement(_Select2.default, _extends({}, rest, {
     name: name,
-    helperText: meta.touched ? meta.error : undefined,
     error: meta.error && meta.touched,
     inputProps: restInput,
     onChange: onChange,
-    value: value
+    value: value,
+    checked: !!checked
   }));
 };

@@ -1,8 +1,10 @@
 import React from 'react'
-import TextField from "@material-ui/core/TextField";
+import TextField from '@material-ui/core/TextField';
 
 export default ({
-  input: { name, onChange, value, ...restInput },
+  input: {
+    checked, value, name, onChange, ...restInput
+  },
   meta,
   ...rest
 }) => (

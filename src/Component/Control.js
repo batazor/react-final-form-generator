@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Field } from 'react-final-form'
 import Checkbox from './Checkbox'
 import Radio from './Radio'
-import TextField from './Radio'
+import TextField from './TextField'
+import Select from './Select'
 
 class Control extends Component {
   constructor(props) {
@@ -27,6 +29,12 @@ class Control extends Component {
           {...opt}
         />
       ),
+      Select: opt => (
+        <Field
+          component={Select}
+          {...opt}
+        />
+      ),
       Custom: opt => (
         <Field {...opt} />
       ),
@@ -34,12 +42,10 @@ class Control extends Component {
   }
 
   render() {
-    const { data, onChange } = this.props
+    const { fields } = this.props
 
-    return this.control[fields.type]({ ...data })
-
-    return fields.map(item => (
-      this.control[item.type]({ ...item })
+    return fields.map(field => (
+      this.control[field.type]({ ...field })
     ))
   }
 }
@@ -51,7 +57,7 @@ Control.defaultProps = {
 Control.propTypes = {
   fields: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    type: PropTypes.type.isRequired,
+    type: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     defaultValue: PropTypes.any,
   })),

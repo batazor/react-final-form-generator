@@ -1,8 +1,10 @@
 import React from 'react'
-import Radio from "@material-ui/core/Radio";
+import Radio from '@material-ui/core/Radio'
 
 export default ({
-  input: { checked, value, name, onChange, ...restInput },
+  input: {
+    checked, value, name, onChange, ...restInput
+  },
   meta,
   ...rest
 }) => (
