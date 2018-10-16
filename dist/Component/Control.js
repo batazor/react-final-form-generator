@@ -34,6 +34,10 @@ var _Select2 = require('./Select');
 
 var _Select3 = _interopRequireDefault(_Select2);
 
+var _Button2 = require('./Button');
+
+var _Button3 = _interopRequireDefault(_Button2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -73,6 +77,12 @@ var Control = function (_Component) {
       Select: function Select(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
           component: _Select3.default,
+          fullWidth: true
+        }, opt));
+      },
+      Button: function Button(opt) {
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
+          component: _Button3.default,
           fullWidth: true
         }, opt));
       },

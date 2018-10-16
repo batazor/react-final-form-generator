@@ -42,6 +42,11 @@ const complex = [
       },
     ],
   },
+  {
+    name: 'submit',
+    label: 'Submit',
+    type: 'Button',
+  },
 ]
 
 storiesOf('Form', module)

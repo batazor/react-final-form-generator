@@ -5,6 +5,7 @@ import Checkbox from './Checkbox'
 import Radio from './Radio'
 import TextField from './TextField'
 import Select from './Select'
+import Button from './Button'
 
 class Control extends Component {
   constructor(props) {
@@ -36,6 +37,13 @@ class Control extends Component {
       Select: opt => (
         <Field
           component={Select}
+          fullWidth
+          {...opt}
+        />
+      ),
+      Button: opt => (
+        <Field
+          component={Button}
           fullWidth
           {...opt}
         />

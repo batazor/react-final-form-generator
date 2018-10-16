@@ -43,6 +43,10 @@ var complex = [{
     value: 'en_GB',
     label: 'English'
   }]
+}, {
+  name: 'submit',
+  label: 'Submit',
+  type: 'Button'
 }];
 
 (0, _react3.storiesOf)('Form', module).add('Simple', function () {
