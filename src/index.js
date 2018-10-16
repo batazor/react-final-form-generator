@@ -16,6 +16,8 @@ function FormGenerator(props) {
             id={props.id}
             className={props.className}
             onSubmit={handleSubmit}
+            onChange={props.onChange}
+            subscription={{ values: true }}
           >
             <Control
               fields={props.fields}
@@ -53,7 +55,7 @@ FormGenerator.defaultProps = {
   className: undefined,
   initialValues: {},
 
-  // onChange: () => {},
+  onChange: () => {},
 }
 
 FormGenerator.propTypes = {
@@ -71,7 +73,7 @@ FormGenerator.propTypes = {
   // currentLocale: PropTypes.string.isRequired,
 
   onSubmit: PropTypes.func.isRequired,
-  // onChange: PropTypes.func,
+  onChange: PropTypes.func,
 }
 
 export default FormGenerator

@@ -42,11 +42,11 @@ const complex = [
       },
     ],
   },
-  {
-    name: 'recaptcha',
-    label: 'Recaptcha',
-    type: 'Recaptcha',
-  },
+  // {
+  //   name: 'recaptcha',
+  //   label: 'Recaptcha',
+  //   type: 'Recaptcha',
+  // },
   {
     name: 'submit',
     label: 'Submit',
@@ -69,5 +69,6 @@ storiesOf('Form', module)
       fields={complex}
 
       onSubmit={action('onSubmit')}
+      onChange={action('onChange')}
     />
   ))

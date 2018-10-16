@@ -43,7 +43,9 @@ function FormGenerator(props) {
           {
             id: props.id,
             className: props.className,
-            onSubmit: handleSubmit
+            onSubmit: handleSubmit,
+            onChange: props.onChange,
+            subscription: { values: true }
           },
           _react2.default.createElement(_Control2.default, {
             fields: props.fields
@@ -86,9 +88,9 @@ function FormGenerator(props) {
 
 FormGenerator.defaultProps = {
   className: undefined,
-  initialValues: {}
+  initialValues: {},
 
-  // onChange: () => {},
+  onChange: function onChange() {}
 };
 
 FormGenerator.propTypes = {
@@ -105,8 +107,8 @@ FormGenerator.propTypes = {
   // I18N: PropTypes.object.isRequired,
   // currentLocale: PropTypes.string.isRequired,
 
-  onSubmit: _propTypes2.default.func.isRequired
-  // onChange: PropTypes.func,
+  onSubmit: _propTypes2.default.func.isRequired,
+  onChange: _propTypes2.default.func
 };
 
 exports.default = FormGenerator;

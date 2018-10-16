@@ -1,6 +1,6 @@
 {
   "name": "react-final-form-generator",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Generating form over react-final-form",
   "main": "dist/index.js",
   "scripts": {
@@ -52,6 +52,7 @@
     "final-form": "^4.10.0",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
-    "react-final-form": "^3.6.7"
+    "react-final-form": "^3.6.7",
+    "react-google-recaptcha": "^1.0.4"
   }
 }

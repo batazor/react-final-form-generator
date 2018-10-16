@@ -43,11 +43,13 @@ var complex = [{
     value: 'en_GB',
     label: 'English'
   }]
-}, {
-  name: 'recaptcha',
-  label: 'Recaptcha',
-  type: 'Recaptcha'
-}, {
+},
+// {
+//   name: 'recaptcha',
+//   label: 'Recaptcha',
+//   type: 'Recaptcha',
+// },
+{
   name: 'submit',
   label: 'Submit',
   type: 'Button'
@@ -65,6 +67,7 @@ var complex = [{
     id: 'form',
     fields: complex,
 
-    onSubmit: (0, _addonActions.action)('onSubmit')
+    onSubmit: (0, _addonActions.action)('onSubmit'),
+    onChange: (0, _addonActions.action)('onChange')
   });
 });
