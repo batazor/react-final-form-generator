@@ -34,6 +34,7 @@ exports.default = function (_ref) {
     error: meta.error && meta.touched,
     inputProps: restInput,
     onChange: onChange,
+    type: rest.typeInput || 'text',
     value: value
   }));
 };

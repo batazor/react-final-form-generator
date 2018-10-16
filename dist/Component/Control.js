@@ -74,8 +74,7 @@ var Control = function (_Component) {
       TextField: function TextField(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
           component: _TextField3.default,
-          fullWidth: true,
-          type: opt.typeInput || 'text'
+          fullWidth: true
         }, opt));
       },
       Select: function Select(opt) {
