@@ -25,6 +25,6 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     _Button2.default,
     _extends({}, rest, { type: 'submit' }),
-    input.name
+    input.label
   );
 };

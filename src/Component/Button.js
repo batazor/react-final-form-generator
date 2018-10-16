@@ -6,6 +6,6 @@ export default ({
   ...rest
 }) => (
   <Button {...rest} type="submit">
-    { input.name }
+    { input.label }
   </Button>
 )
