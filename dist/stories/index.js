@@ -44,6 +44,10 @@ var complex = [{
     label: 'English'
   }]
 }, {
+  name: 'recaptcha',
+  label: 'Recaptcha',
+  type: 'Recaptcha'
+}, {
   name: 'submit',
   label: 'Submit',
   type: 'Button'

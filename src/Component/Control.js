@@ -6,6 +6,7 @@ import Radio from './Radio'
 import TextField from './TextField'
 import Select from './Select'
 import Button from './Button'
+import Recaptcha from './Recaptcha'
 
 class Control extends Component {
   constructor(props) {
@@ -44,6 +45,13 @@ class Control extends Component {
       Button: opt => (
         <Field
           component={Button}
+          fullWidth
+          {...opt}
+        />
+      ),
+      Recaptcha: opt => (
+        <Field
+          component={Recaptcha}
           fullWidth
           {...opt}
         />

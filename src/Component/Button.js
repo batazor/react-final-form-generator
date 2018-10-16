@@ -5,7 +5,7 @@ export default ({
   input, // eslint-disable-line
   ...rest
 }) => (
-  <Button type="submit" disabled={rest.disabled}>
+  <Button {...rest} type="submit">
     { input.name }
   </Button>
 )

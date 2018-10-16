@@ -38,6 +38,10 @@ var _Button2 = require('./Button');
 
 var _Button3 = _interopRequireDefault(_Button2);
 
+var _Recaptcha2 = require('./Recaptcha');
+
+var _Recaptcha3 = _interopRequireDefault(_Recaptcha2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -83,6 +87,12 @@ var Control = function (_Component) {
       Button: function Button(opt) {
         return _react2.default.createElement(_reactFinalForm.Field, _extends({
           component: _Button3.default,
+          fullWidth: true
+        }, opt));
+      },
+      Recaptcha: function Recaptcha(opt) {
+        return _react2.default.createElement(_reactFinalForm.Field, _extends({
+          component: _Recaptcha3.default,
           fullWidth: true
         }, opt));
       },

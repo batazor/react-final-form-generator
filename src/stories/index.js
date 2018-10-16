@@ -43,6 +43,11 @@ const complex = [
     ],
   },
   {
+    name: 'recaptcha',
+    label: 'Recaptcha',
+    type: 'Recaptcha',
+  },
+  {
     name: 'submit',
     label: 'Submit',
     type: 'Button',
