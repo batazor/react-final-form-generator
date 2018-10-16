@@ -31,7 +31,6 @@ class Control extends Component {
         <Field
           component={TextField}
           fullWidth
-          type={opt.typeInput || 'text'}
           {...opt}
         />
       ),
