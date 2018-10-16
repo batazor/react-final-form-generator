@@ -21,11 +21,13 @@ const complex = [
     name: 'password',
     label: 'Password',
     type: 'TextField',
+    typeInput: 'password',
   },
   {
     name: 'retryPassword',
     label: 'Retry password',
     type: 'TextField',
+    typeInput: 'password',
   },
   {
     name: 'language',
