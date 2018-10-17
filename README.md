@@ -2,6 +2,11 @@
 
 Generating form over react-final-form
 
+#### Feature
+
++ generation form use JSON
++ condition
+
 ### Usage
 
 ```js
@@ -27,7 +32,7 @@ const fields = [
 ]
 // ...code
 
-func renderForm() {
+function renderForm() {
   return (
     <Form
       fields={fields}
