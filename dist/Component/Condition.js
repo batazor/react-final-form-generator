@@ -31,9 +31,9 @@ function filter(_ref) {
     case '<=':
       return value <= is;
     case '==':
-      return value == is; // eslint-disable-line
+      return value === is;
     case '!=':
-      return value != is; // eslint-disable-line
+      return value !== is;
     default:
       return true;
   }

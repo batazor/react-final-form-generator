@@ -13,9 +13,9 @@ function filter({ value, action, is }) {
     case '<=':
       return value <= is
     case '==':
-      return value == is // eslint-disable-line
+      return value === is
     case '!=':
-      return value != is // eslint-disable-line
+      return value !== is
     default:
       return true
   }
