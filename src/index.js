@@ -10,7 +10,7 @@ function FormGenerator(props) {
     <Form
       onSubmit={props.onSubmit}
       initialValues={props.initialValues}
-      render={({ handleSubmit, submitError }) => (
+      render={({ handleSubmit, submitError, values }) => (
         <Fragment>
           <form
             id={props.id}
@@ -21,6 +21,7 @@ function FormGenerator(props) {
           >
             <Control
               fields={props.fields}
+              values={values}
             />
           </form>
           <div>

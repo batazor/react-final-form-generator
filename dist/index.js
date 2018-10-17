@@ -34,7 +34,8 @@ function FormGenerator(props) {
     initialValues: props.initialValues,
     render: function render(_ref) {
       var handleSubmit = _ref.handleSubmit,
-          submitError = _ref.submitError;
+          submitError = _ref.submitError,
+          values = _ref.values;
       return _react2.default.createElement(
         _react.Fragment,
         null,
@@ -48,7 +49,8 @@ function FormGenerator(props) {
             subscription: { values: true }
           },
           _react2.default.createElement(_Control2.default, {
-            fields: props.fields
+            fields: props.fields,
+            values: values
           })
         ),
         _react2.default.createElement(

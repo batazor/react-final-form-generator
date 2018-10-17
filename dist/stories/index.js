@@ -27,11 +27,13 @@ var complex = [{
 }, {
   name: 'password',
   label: 'Password',
-  type: 'TextField'
+  type: 'TextField',
+  typeInput: 'password'
 }, {
   name: 'retryPassword',
   label: 'Retry password',
-  type: 'TextField'
+  type: 'TextField',
+  typeInput: 'password'
 }, {
   name: 'language',
   label: 'Language',
@@ -52,7 +54,12 @@ var complex = [{
 {
   name: 'submit',
   label: 'Submit',
-  type: 'Button'
+  type: 'Button',
+  condition: {
+    when: 'email',
+    is: 'test',
+    action: '=='
+  }
 }];
 
 (0, _react3.storiesOf)('Form', module).add('Simple', function () {

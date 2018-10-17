@@ -6,12 +6,33 @@ Generating form over react-final-form
 
 ```js
 import Form from 'react-final-form-generator'
+
+// Fields
+const fields = [
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'TextField',
+  },
+  {
+    name: 'submit',
+    label: 'Submit',
+    type: 'Button',
+    condition: {
+      when: 'email',
+      is: 'test',
+      action: '==',
+    },
+  },
+]
 // ...code
 
-<Form
-  fields={fields}
-
-  onChange={onChange}
-  onSubmit={onSubmit}
-/>
+func renderForm() {
+  return (
+    <Form
+      fields={fields}
+      onSubmit={onSubmit}
+    />
+  )
+}
 ```

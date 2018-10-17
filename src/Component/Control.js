@@ -7,6 +7,7 @@ import TextField from './TextField'
 import Select from './Select'
 import Button from './Button'
 import Recaptcha from './Recaptcha'
+import Condition from './Condition'
 
 class Control extends Component {
   constructor(props) {
@@ -14,52 +15,67 @@ class Control extends Component {
 
     this.control = {
       Checkbox: opt => (
-        <Field
-          component={Checkbox}
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            component={Checkbox}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
       ),
       Radio: opt => (
-        <Field
-          component={Radio}
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            component={Radio}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
       ),
       TextField: opt => (
-        <Field
-          component={TextField}
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            component={TextField}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
       ),
       Select: opt => (
-        <Field
-          component={Select}
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            component={Select}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
       ),
       Button: opt => (
-        <Field
-          component={Button}
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            component={Button}
+            fullWidth
+            values={opt.values}
+            {...opt}
+          />
+        </Condition>
       ),
       Recaptcha: opt => (
-        <Field
-          component={Recaptcha}
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            component={Recaptcha}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
       ),
       Custom: opt => (
-        <Field
-          fullWidth
-          {...opt}
-        />
+        <Condition {...opt.condition}>
+          <Field
+            fullWidth
+            {...opt}
+          />
+        </Condition>
       ),
     }
   }

@@ -42,6 +42,10 @@ var _Recaptcha2 = require('./Recaptcha');
 
 var _Recaptcha3 = _interopRequireDefault(_Recaptcha2);
 
+var _Condition = require('./Condition');
+
+var _Condition2 = _interopRequireDefault(_Condition);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -60,45 +64,74 @@ var Control = function (_Component) {
 
     _this.control = {
       Checkbox: function Checkbox(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Checkbox3.default,
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Checkbox3.default,
+            fullWidth: true
+          }, opt))
+        );
       },
       Radio: function Radio(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Radio3.default,
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Radio3.default,
+            fullWidth: true
+          }, opt))
+        );
       },
       TextField: function TextField(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _TextField3.default,
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _TextField3.default,
+            fullWidth: true
+          }, opt))
+        );
       },
       Select: function Select(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Select3.default,
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Select3.default,
+            fullWidth: true
+          }, opt))
+        );
       },
       Button: function Button(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Button3.default,
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Button3.default,
+            fullWidth: true,
+            values: opt.values
+          }, opt))
+        );
       },
       Recaptcha: function Recaptcha(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          component: _Recaptcha3.default,
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Recaptcha3.default,
+            fullWidth: true
+          }, opt))
+        );
       },
       Custom: function Custom(opt) {
-        return _react2.default.createElement(_reactFinalForm.Field, _extends({
-          fullWidth: true
-        }, opt));
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            fullWidth: true
+          }, opt))
+        );
       }
     };
     return _this;
