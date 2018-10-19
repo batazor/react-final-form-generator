@@ -57,8 +57,8 @@ var complex = [{
   type: 'Button',
   condition: {
     when: 'email',
-    is: '1',
-    action: '>'
+    is: 'test',
+    action: '=='
   }
 }];
 
