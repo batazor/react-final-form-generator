@@ -5,6 +5,7 @@ import Checkbox from './Checkbox'
 import Radio from './Radio'
 import TextField from './TextField'
 import Select from './Select'
+import Switch from './Switch'
 import Button from './Button'
 import Recaptcha from './Recaptcha'
 import Condition from './Condition'
@@ -14,6 +15,15 @@ class Control extends Component {
     super(props)
 
     this.control = {
+      Switch: opt => (
+        <Condition {...opt.condition}>
+          <Field
+            component={Switch}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
+      ),
       Checkbox: opt => (
         <Condition {...opt.condition}>
           <Field
