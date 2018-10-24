@@ -1,7 +1,7 @@
 import React from 'react'
 import Recaptcha from 'react-google-recaptcha'
 
-export default ({
+export default React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -13,4 +13,4 @@ export default ({
     InputProps={restInput}
     onChange={onChange}
   />
-)
+))

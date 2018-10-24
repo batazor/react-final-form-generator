@@ -3,7 +3,7 @@ import Switch from '@material-ui/core/Switch'
 import FormControl from '@material-ui/core/FormControl'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 
-export default ({
+export default React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -26,4 +26,4 @@ export default ({
       label={rest.label}
     />
   </FormControl>
-)
+))

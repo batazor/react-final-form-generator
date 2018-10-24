@@ -1,7 +1,7 @@
 import React from 'react'
 import Radio from '@material-ui/core/Radio'
 
-export default ({
+export default React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -16,4 +16,4 @@ export default ({
     checked={!!checked}
     value={value}
   />
-)
+))

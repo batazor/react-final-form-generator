@@ -1,7 +1,7 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField'
 
-export default ({
+export default React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -18,4 +18,4 @@ export default ({
     type={rest.typeInput || 'text'}
     value={value}
   />
-)
+))

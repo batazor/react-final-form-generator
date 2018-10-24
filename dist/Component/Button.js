@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-exports.default = function (_ref) {
+exports.default = _react2.default.memo(function (_ref) {
   var input = _ref.input,
       rest = _objectWithoutProperties(_ref, ['input']);
 
@@ -27,4 +27,4 @@ exports.default = function (_ref) {
     _extends({}, rest, { type: 'submit' }),
     rest.label
   );
-};
+});

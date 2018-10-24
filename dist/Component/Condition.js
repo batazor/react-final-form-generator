@@ -40,7 +40,7 @@ function filter(_ref) {
 }
 
 // eslint-disable-next-line
-var Condition = function Condition(_ref2) {
+var Condition = _react2.default.memo(function (_ref2) {
   var when = _ref2.when,
       is = _ref2.is,
       action = _ref2.action,
@@ -58,7 +58,7 @@ var Condition = function Condition(_ref2) {
   }
 
   return children;
-};
+});
 
 Condition.propTypes = {
   when: _propTypes2.default.string.isRequired,

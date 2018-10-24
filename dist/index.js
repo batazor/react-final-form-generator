@@ -28,7 +28,7 @@ var _Control2 = _interopRequireDefault(_Control);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function FormGenerator(props) {
+var FormGenerator = _react2.default.memo(function (props) {
   return _react2.default.createElement(_reactFinalForm.Form, {
     onSubmit: props.onSubmit,
     initialValues: props.initialValues,
@@ -86,7 +86,7 @@ function FormGenerator(props) {
       );
     }
   });
-}
+});
 
 FormGenerator.defaultProps = {
   className: undefined,

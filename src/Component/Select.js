@@ -4,7 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
 
-export default ({
+export default React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -34,4 +34,4 @@ export default ({
       }
     </Select>
   </FormControl>
-)
+))

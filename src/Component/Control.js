@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'react-final-form'
 import Checkbox from './Checkbox'
@@ -11,7 +11,7 @@ import Recaptcha from './Recaptcha'
 import Condition from './Condition'
 import Color from './Color'
 
-class Control extends Component {
+class Control extends PureComponent {
   constructor(props) {
     super(props)
 

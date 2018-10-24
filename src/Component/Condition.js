@@ -22,7 +22,7 @@ function filter({ value, action, is }) {
 }
 
 // eslint-disable-next-line
-const Condition = ({ when, is, action, children }) => {
+const Condition = React.memo(({ when, is, action, children }) => {
   if (when && is) {
     return (
       <Field name={when} subscription={{ value: true }}>
@@ -32,7 +32,7 @@ const Condition = ({ when, is, action, children }) => {
   }
 
   return children
-}
+})
 
 Condition.propTypes = {
   when: PropTypes.string.isRequired,
