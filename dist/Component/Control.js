@@ -75,30 +75,32 @@ var Control = function (_Component) {
         return _react2.default.createElement(
           _Condition2.default,
           opt.condition,
-          _react2.default.createElement(_reactFinalForm.Field, _extends({
+          _react2.default.createElement(_reactFinalForm.Field, _extends({}, opt, {
             component: _Switch3.default,
-            fullWidth: true
-          }, opt))
+            fullWidth: true,
+            type: 'checkbox'
+          }))
         );
       },
       Checkbox: function Checkbox(opt) {
         return _react2.default.createElement(
           _Condition2.default,
           opt.condition,
-          _react2.default.createElement(_reactFinalForm.Field, _extends({
+          _react2.default.createElement(_reactFinalForm.Field, _extends({}, opt, {
             component: _Checkbox3.default,
-            fullWidth: true
-          }, opt))
+            fullWidth: true,
+            type: 'checkbox'
+          }))
         );
       },
       Color: function Color(opt) {
         return _react2.default.createElement(
           _Condition2.default,
           opt.condition,
-          _react2.default.createElement(_reactFinalForm.Field, _extends({
+          _react2.default.createElement(_reactFinalForm.Field, _extends({}, opt, {
             component: _Color3.default,
             fullWidth: true
-          }, opt))
+          }))
         );
       },
       Radio: function Radio(opt) {

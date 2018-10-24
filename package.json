@@ -1,6 +1,6 @@
 {
   "name": "react-final-form-generator",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Generating form over react-final-form",
   "main": "dist/index.js",
   "scripts": {

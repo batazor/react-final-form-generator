@@ -18,9 +18,9 @@ var _FormControl = require('@material-ui/core/FormControl');
 
 var _FormControl2 = _interopRequireDefault(_FormControl);
 
-var _InputLabel = require('@material-ui/core/InputLabel');
+var _FormControlLabel = require('@material-ui/core/FormControlLabel');
 
-var _InputLabel2 = _interopRequireDefault(_InputLabel);
+var _FormControlLabel2 = _interopRequireDefault(_FormControlLabel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39,18 +39,16 @@ exports.default = function (_ref) {
   return _react2.default.createElement(
     _FormControl2.default,
     { style: { width: '100%' } },
-    _react2.default.createElement(
-      _InputLabel2.default,
-      { htmlFor: 'controlled-open-select' },
-      rest.label
-    ),
-    _react2.default.createElement(_Switch2.default, _extends({}, rest, {
-      name: name,
-      error: meta.error && meta.touched,
-      inputProps: restInput,
-      onChange: onChange,
-      value: value,
-      checked: !!checked
-    }))
+    _react2.default.createElement(_FormControlLabel2.default, {
+      control: _react2.default.createElement(_Switch2.default, _extends({}, rest, {
+        name: name,
+        error: meta.error && meta.touched,
+        inputProps: restInput,
+        onChange: onChange,
+        value: value,
+        checked: !!checked
+      })),
+      label: rest.label
+    })
   );
 };

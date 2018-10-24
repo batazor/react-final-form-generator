@@ -52,6 +52,14 @@ var complex = [{
 //   type: 'Recaptcha',
 // },
 {
+  name: 'success',
+  label: 'success',
+  type: 'Switch'
+}, {
+  name: 'success',
+  label: 'success',
+  type: 'Checkbox'
+}, {
   name: 'submit',
   label: 'Submit',
   type: 'Button',

@@ -14,6 +14,14 @@ var _Checkbox = require('@material-ui/core/Checkbox');
 
 var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
+var _FormControl = require('@material-ui/core/FormControl');
+
+var _FormControl2 = _interopRequireDefault(_FormControl);
+
+var _FormControlLabel = require('@material-ui/core/FormControlLabel');
+
+var _FormControlLabel2 = _interopRequireDefault(_FormControlLabel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -28,10 +36,19 @@ exports.default = function (_ref) {
       meta = _ref.meta,
       rest = _objectWithoutProperties(_ref, ['input', 'meta']);
 
-  return _react2.default.createElement(_Checkbox2.default, _extends({}, rest, {
-    name: name,
-    InputProps: restInput,
-    onChange: onChange,
-    checked: !!checked
-  }));
+  return _react2.default.createElement(
+    _FormControl2.default,
+    { style: { width: '100%' } },
+    _react2.default.createElement(_FormControlLabel2.default, {
+      control: _react2.default.createElement(_Checkbox2.default, _extends({}, rest, {
+        name: name,
+        error: meta.error && meta.touched,
+        inputProps: restInput,
+        onChange: onChange,
+        value: value,
+        checked: !!checked
+      })),
+      label: rest.label
+    })
+  );
 };
