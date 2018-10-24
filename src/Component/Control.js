@@ -19,27 +19,29 @@ class Control extends Component {
       Switch: opt => (
         <Condition {...opt.condition}>
           <Field
+            {...opt}
             component={Switch}
             fullWidth
-            {...opt}
+            type="checkbox"
           />
         </Condition>
       ),
       Checkbox: opt => (
         <Condition {...opt.condition}>
           <Field
+            {...opt}
             component={Checkbox}
             fullWidth
-            {...opt}
+            type="checkbox"
           />
         </Condition>
       ),
       Color: opt => (
         <Condition {...opt.condition}>
           <Field
+            {...opt}
             component={Color}
             fullWidth
-            {...opt}
           />
         </Condition>
       ),

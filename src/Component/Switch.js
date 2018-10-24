@@ -1,7 +1,7 @@
 import React from 'react'
 import Switch from '@material-ui/core/Switch'
 import FormControl from '@material-ui/core/FormControl'
-import InputLabel from '@material-ui/core/InputLabel'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 export default ({
   input: {
@@ -11,18 +11,19 @@ export default ({
   ...rest
 }) => (
   <FormControl style={{ width: '100%' }}>
-    <InputLabel htmlFor="controlled-open-select">
-      {rest.label}
-    </InputLabel>
-
-    <Switch
-      {...rest}
-      name={name}
-      error={meta.error && meta.touched}
-      inputProps={restInput}
-      onChange={onChange}
-      value={value}
-      checked={!!checked}
+    <FormControlLabel
+      control={
+        <Switch
+          {...rest}
+          name={name}
+          error={meta.error && meta.touched}
+          inputProps={restInput}
+          onChange={onChange}
+          value={value}
+          checked={!!checked}
+        />
+      }
+      label={rest.label}
     />
   </FormControl>
 )

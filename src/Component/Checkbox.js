@@ -1,5 +1,7 @@
 import React from 'react'
 import Checkbox from '@material-ui/core/Checkbox'
+import FormControl from '@material-ui/core/FormControl'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 export default ({
   input: {
@@ -8,11 +10,20 @@ export default ({
   meta,
   ...rest
 }) => (
-  <Checkbox
-    {...rest}
-    name={name}
-    InputProps={restInput}
-    onChange={onChange}
-    checked={!!checked}
-  />
+  <FormControl style={{ width: '100%' }}>
+    <FormControlLabel
+      control={
+        <Checkbox
+          {...rest}
+          name={name}
+          error={meta.error && meta.touched}
+          inputProps={restInput}
+          onChange={onChange}
+          value={value}
+          checked={!!checked}
+        />
+      }
+      label={rest.label}
+    />
+  </FormControl>
 )
