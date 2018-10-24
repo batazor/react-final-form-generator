@@ -58,7 +58,7 @@ exports.default = function (_ref) {
         value: value,
         checked: !!checked
       }),
-      rest.option.map(function (item) {
+      (rest.option || []).map(function (item) {
         return _react2.default.createElement(
           _MenuItem2.default,
           { value: item.value },

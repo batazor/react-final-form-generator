@@ -26,7 +26,7 @@ export default ({
       checked={!!checked}
     >
       {
-        rest.option.map(item => (
+        (rest.option || []).map(item => (
           <MenuItem value={item.value}>
             {item.label}
           </MenuItem>
