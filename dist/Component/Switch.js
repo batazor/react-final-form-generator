@@ -14,6 +14,14 @@ var _Switch = require('@material-ui/core/Switch');
 
 var _Switch2 = _interopRequireDefault(_Switch);
 
+var _FormControl = require('@material-ui/core/FormControl');
+
+var _FormControl2 = _interopRequireDefault(_FormControl);
+
+var _InputLabel = require('@material-ui/core/InputLabel');
+
+var _InputLabel2 = _interopRequireDefault(_InputLabel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -28,10 +36,21 @@ exports.default = function (_ref) {
       meta = _ref.meta,
       rest = _objectWithoutProperties(_ref, ['input', 'meta']);
 
-  return _react2.default.createElement(_Switch2.default, _extends({}, rest, {
-    name: name,
-    InputProps: restInput,
-    onChange: onChange,
-    checked: !!checked
-  }));
+  return _react2.default.createElement(
+    _FormControl2.default,
+    { style: { width: '100%' } },
+    _react2.default.createElement(
+      _InputLabel2.default,
+      { htmlFor: 'controlled-open-select' },
+      rest.label
+    ),
+    _react2.default.createElement(_Switch2.default, _extends({}, rest, {
+      name: name,
+      error: meta.error && meta.touched,
+      inputProps: restInput,
+      onChange: onChange,
+      value: value,
+      checked: !!checked
+    }))
+  );
 };
