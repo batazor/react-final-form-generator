@@ -37,7 +37,7 @@ class Control extends Component {
       Color: opt => (
         <Condition {...opt.condition}>
           <Field
-            component={Radio}
+            component={Color}
             fullWidth
             {...opt}
           />

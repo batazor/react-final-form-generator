@@ -50,9 +50,9 @@ var _Condition = require('./Condition');
 
 var _Condition2 = _interopRequireDefault(_Condition);
 
-var _Color = require('./Color');
+var _Color2 = require('./Color');
 
-var _Color2 = _interopRequireDefault(_Color);
+var _Color3 = _interopRequireDefault(_Color2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -96,7 +96,7 @@ var Control = function (_Component) {
           _Condition2.default,
           opt.condition,
           _react2.default.createElement(_reactFinalForm.Field, _extends({
-            component: _Radio3.default,
+            component: _Color3.default,
             fullWidth: true
           }, opt))
         );
