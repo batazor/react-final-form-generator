@@ -34,6 +34,10 @@ var _Select2 = require('./Select');
 
 var _Select3 = _interopRequireDefault(_Select2);
 
+var _Switch2 = require('./Switch');
+
+var _Switch3 = _interopRequireDefault(_Switch2);
+
 var _Button2 = require('./Button');
 
 var _Button3 = _interopRequireDefault(_Button2);
@@ -45,6 +49,10 @@ var _Recaptcha3 = _interopRequireDefault(_Recaptcha2);
 var _Condition = require('./Condition');
 
 var _Condition2 = _interopRequireDefault(_Condition);
+
+var _Color = require('./Color');
+
+var _Color2 = _interopRequireDefault(_Color);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63,12 +71,32 @@ var Control = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Control.__proto__ || Object.getPrototypeOf(Control)).call(this, props));
 
     _this.control = {
+      Switch: function Switch(opt) {
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Switch3.default,
+            fullWidth: true
+          }, opt))
+        );
+      },
       Checkbox: function Checkbox(opt) {
         return _react2.default.createElement(
           _Condition2.default,
           opt.condition,
           _react2.default.createElement(_reactFinalForm.Field, _extends({
             component: _Checkbox3.default,
+            fullWidth: true
+          }, opt))
+        );
+      },
+      Color: function Color(opt) {
+        return _react2.default.createElement(
+          _Condition2.default,
+          opt.condition,
+          _react2.default.createElement(_reactFinalForm.Field, _extends({
+            component: _Radio3.default,
             fullWidth: true
           }, opt))
         );

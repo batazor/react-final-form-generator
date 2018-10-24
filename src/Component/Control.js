@@ -9,6 +9,7 @@ import Switch from './Switch'
 import Button from './Button'
 import Recaptcha from './Recaptcha'
 import Condition from './Condition'
+import Color from './Color'
 
 class Control extends Component {
   constructor(props) {
@@ -28,6 +29,15 @@ class Control extends Component {
         <Condition {...opt.condition}>
           <Field
             component={Checkbox}
+            fullWidth
+            {...opt}
+          />
+        </Condition>
+      ),
+      Color: opt => (
+        <Condition {...opt.condition}>
+          <Field
+            component={Radio}
             fullWidth
             {...opt}
           />
