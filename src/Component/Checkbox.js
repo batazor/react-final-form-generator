@@ -12,7 +12,7 @@ export default React.memo(({
 }) => (
   <FormControl style={{ width: '100%' }}>
     <FormControlLabel
-      control={
+      control={(
         <Checkbox
           {...rest}
           name={name}
@@ -22,7 +22,7 @@ export default React.memo(({
           value={value}
           checked={!!checked}
         />
-      }
+)}
       label={rest.label}
     />
   </FormControl>
