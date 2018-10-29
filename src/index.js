@@ -19,9 +19,10 @@ const FormGenerator = React.memo(props => (
           subscription={{ values: true }}
         >
           <Control
-            fields={props.fields}
+            fields={props.fields || []}
             values={values}
           />
+          {props.children}
         </form>
         <div>
           {
@@ -76,3 +77,4 @@ FormGenerator.propTypes = {
 }
 
 export default FormGenerator
+export Control from './Component/Control'

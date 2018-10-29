@@ -85,4 +85,18 @@ var complex = [{
     onSubmit: (0, _addonActions.action)('onSubmit'),
     onChange: (0, _addonActions.action)('onChange')
   });
+}).add('Wizard', function () {
+  return _react2.default.createElement(
+    _index2.default,
+    {
+      id: 'form'
+      // fields={complex}
+
+      , onSubmit: (0, _addonActions.action)('onSubmit'),
+      onChange: (0, _addonActions.action)('onChange')
+    },
+    _react2.default.createElement(_index.Control, { fields: simple }),
+    _react2.default.createElement(_index.Control, { fields: simple }),
+    _react2.default.createElement(_index.Control, { fields: simple })
+  );
 });

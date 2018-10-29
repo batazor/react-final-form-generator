@@ -3,6 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Control = undefined;
 
 var _lodash = require('lodash');
 
@@ -22,9 +23,9 @@ var _Typography = require('@material-ui/core/Typography');
 
 var _Typography2 = _interopRequireDefault(_Typography);
 
-var _Control = require('./Component/Control');
+var _Control2 = require('./Component/Control');
 
-var _Control2 = _interopRequireDefault(_Control);
+var _Control3 = _interopRequireDefault(_Control2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48,10 +49,11 @@ var FormGenerator = _react2.default.memo(function (props) {
             onChange: props.onChange,
             subscription: { values: true }
           },
-          _react2.default.createElement(_Control2.default, {
-            fields: props.fields,
+          _react2.default.createElement(_Control3.default, {
+            fields: props.fields || [],
             values: values
-          })
+          }),
+          props.children
         ),
         _react2.default.createElement(
           'div',
@@ -114,3 +116,4 @@ FormGenerator.propTypes = {
 };
 
 exports.default = FormGenerator;
+exports.Control = _Control3.default;

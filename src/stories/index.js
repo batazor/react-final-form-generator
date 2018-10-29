@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import Form from '../index'
+import Form, { Control } from '../index'
 
 const simple = [
   {
@@ -88,4 +88,17 @@ storiesOf('Form', module)
       onSubmit={action('onSubmit')}
       onChange={action('onChange')}
     />
+  ))
+  .add('Wizard', () => (
+    <Form
+      id="form"
+      // fields={complex}
+
+      onSubmit={action('onSubmit')}
+      onChange={action('onChange')}
+    >
+      <Control fields={simple} />
+      <Control fields={simple} />
+      <Control fields={simple} />
+    </Form>
   ))

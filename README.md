@@ -10,7 +10,7 @@ Generating form over react-final-form
 ### Usage
 
 ```js
-import Form from 'react-final-form-generator'
+import Form, { Control } from 'react-final-form-generator'
 
 // Fields
 const fields = [
@@ -37,7 +37,10 @@ function renderForm() {
     <Form
       fields={fields}
       onSubmit={onSubmit}
-    />
+    >
+      <Control fields={fieldsOne} />
+      <Control fields={fieldsTwo} />
+    </Form>
   )
 }
 ```
