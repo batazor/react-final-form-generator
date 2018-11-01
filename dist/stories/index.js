@@ -1,16 +1,14 @@
-'use strict';
+"use strict";
 
-var _react = require('react');
+var _react = _interopRequireDefault(require("react"));
 
-var _react2 = _interopRequireDefault(_react);
+var _react2 = require("@storybook/react");
 
-var _react3 = require('@storybook/react');
+var _addonActions = require("@storybook/addon-actions");
 
-var _addonActions = require('@storybook/addon-actions');
+var _index = _interopRequireWildcard(require("../index"));
 
-var _index = require('../index');
-
-var _index2 = _interopRequireDefault(_index);
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19,7 +17,6 @@ var simple = [{
   label: 'Email',
   type: 'TextField'
 }];
-
 var complex = [{
   name: 'email',
   label: 'Email',
@@ -45,8 +42,7 @@ var complex = [{
     value: 'en_GB',
     label: 'English'
   }]
-},
-// {
+}, // {
 //   name: 'recaptcha',
 //   label: 'Recaptcha',
 //   type: 'Recaptcha',
@@ -69,34 +65,30 @@ var complex = [{
     action: '=='
   }
 }];
-
-(0, _react3.storiesOf)('Form', module).add('Simple', function () {
-  return _react2.default.createElement(_index2.default, {
-    id: 'form',
+(0, _react2.storiesOf)('Form', module).add('Simple', function () {
+  return _react.default.createElement(_index.default, {
+    id: "form",
     fields: simple,
-
     onSubmit: (0, _addonActions.action)('onSubmit')
   });
 }).add('Complex', function () {
-  return _react2.default.createElement(_index2.default, {
-    id: 'form',
+  return _react.default.createElement(_index.default, {
+    id: "form",
     fields: complex,
-
     onSubmit: (0, _addonActions.action)('onSubmit'),
     onChange: (0, _addonActions.action)('onChange')
   });
 }).add('Wizard', function () {
-  return _react2.default.createElement(
-    _index2.default,
-    {
-      id: 'form'
-      // fields={complex}
-
-      , onSubmit: (0, _addonActions.action)('onSubmit'),
-      onChange: (0, _addonActions.action)('onChange')
-    },
-    _react2.default.createElement(_index.Control, { fields: simple }),
-    _react2.default.createElement(_index.Control, { fields: simple }),
-    _react2.default.createElement(_index.Control, { fields: simple })
-  );
+  return _react.default.createElement(_index.default, {
+    id: "form" // fields={complex}
+    ,
+    onSubmit: (0, _addonActions.action)('onSubmit'),
+    onChange: (0, _addonActions.action)('onChange')
+  }, _react.default.createElement(_index.Control, {
+    fields: simple
+  }), _react.default.createElement(_index.Control, {
+    fields: simple
+  }), _react.default.createElement(_index.Control, {
+    fields: simple
+  }));
 });

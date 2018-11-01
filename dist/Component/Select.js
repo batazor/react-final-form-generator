@@ -1,70 +1,56 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = void 0;
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _react = _interopRequireDefault(require("react"));
 
-var _react = require('react');
+var _Select = _interopRequireDefault(require("@material-ui/core/Select"));
 
-var _react2 = _interopRequireDefault(_react);
+var _MenuItem = _interopRequireDefault(require("@material-ui/core/MenuItem"));
 
-var _Select = require('@material-ui/core/Select');
+var _FormControl = _interopRequireDefault(require("@material-ui/core/FormControl"));
 
-var _Select2 = _interopRequireDefault(_Select);
-
-var _MenuItem = require('@material-ui/core/MenuItem');
-
-var _MenuItem2 = _interopRequireDefault(_MenuItem);
-
-var _FormControl = require('@material-ui/core/FormControl');
-
-var _FormControl2 = _interopRequireDefault(_FormControl);
-
-var _InputLabel = require('@material-ui/core/InputLabel');
-
-var _InputLabel2 = _interopRequireDefault(_InputLabel);
+var _InputLabel = _interopRequireDefault(require("@material-ui/core/InputLabel"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-exports.default = _react2.default.memo(function (_ref) {
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var _default = _react.default.memo(function (_ref) {
   var _ref$input = _ref.input,
       checked = _ref$input.checked,
       value = _ref$input.value,
       name = _ref$input.name,
       onChange = _ref$input.onChange,
-      restInput = _objectWithoutProperties(_ref$input, ['checked', 'value', 'name', 'onChange']),
+      restInput = _objectWithoutProperties(_ref$input, ["checked", "value", "name", "onChange"]),
       meta = _ref.meta,
-      rest = _objectWithoutProperties(_ref, ['input', 'meta']);
+      rest = _objectWithoutProperties(_ref, ["input", "meta"]);
 
-  return _react2.default.createElement(
-    _FormControl2.default,
-    { style: { width: '100%' } },
-    _react2.default.createElement(
-      _InputLabel2.default,
-      { htmlFor: 'controlled-open-select' },
-      rest.label
-    ),
-    _react2.default.createElement(
-      _Select2.default,
-      _extends({}, rest, {
-        name: name,
-        error: meta.error && meta.touched,
-        inputProps: restInput,
-        onChange: onChange,
-        value: value,
-        checked: !!checked
-      }),
-      (rest.option || []).map(function (item) {
-        return _react2.default.createElement(
-          _MenuItem2.default,
-          { value: item.value },
-          item.label
-        );
-      })
-    )
-  );
+  return _react.default.createElement(_FormControl.default, {
+    style: {
+      width: '100%'
+    }
+  }, _react.default.createElement(_InputLabel.default, {
+    htmlFor: "controlled-open-select"
+  }, rest.label), _react.default.createElement(_Select.default, _extends({}, rest, {
+    name: name,
+    error: meta.error && meta.touched,
+    inputProps: restInput,
+    onChange: onChange,
+    value: value,
+    checked: !!checked
+  }), (rest.option || []).map(function (item) {
+    return _react.default.createElement(_MenuItem.default, {
+      value: item.value
+    }, item.label);
+  })));
 });
+
+exports.default = _default;
