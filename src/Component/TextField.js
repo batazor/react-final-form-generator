@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 
-export default React.memo(({
+const Text = React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -19,3 +20,14 @@ export default React.memo(({
     value={value}
   />
 ))
+
+Text.defaultProps = {
+  meta: null,
+}
+
+Text.propTypes = {
+  input: PropTypes.object.isRequired,
+  meta: PropTypes.object,
+}
+
+export default Text

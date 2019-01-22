@@ -59,16 +59,16 @@ const complex = [
     label: 'success',
     type: 'Checkbox',
   },
-  {
-    name: 'submit',
-    label: 'Submit',
-    type: 'Button',
-    condition: {
-      when: 'email',
-      is: 'test',
-      action: '==',
-    },
-  },
+  // {
+  //   name: 'submit',
+  //   label: 'Submit',
+  //   type: 'Button',
+  //   condition: {
+  //     when: 'email',
+  //     is: 'test',
+  //     action: '==',
+  //   },
+  // },
 ]
 
 storiesOf('Form', module)

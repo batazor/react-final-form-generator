@@ -3,6 +3,7 @@ import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Form } from 'react-final-form'
 import Typography from '@material-ui/core/Typography'
+import FormHelperText from '@material-ui/core/FormHelperText'
 import Control from './Component/Control'
 
 const FormGenerator = React.memo(props => (
@@ -42,7 +43,11 @@ const FormGenerator = React.memo(props => (
               )
             }
             {
-              _.get(submitError, '_error', []).map((issue, index) => <FormHelperText error key={index}>{issue}</FormHelperText>) // eslint-disable-line
+              _.get(submitError, '_error', []).map(issue => (
+                <FormHelperText error key={issue}>
+                  {issue}
+                </FormHelperText>
+              ))
             }
           </ul>
         </div>
@@ -52,18 +57,21 @@ const FormGenerator = React.memo(props => (
 ))
 
 FormGenerator.defaultProps = {
+  children: null,
   className: undefined,
   initialValues: {},
+  fields: [],
 
   onChange: () => {},
 }
 
 FormGenerator.propTypes = {
   id: PropTypes.string.isRequired,
+  children: PropTypes.array,
   className: PropTypes.string,
   initialValues: PropTypes.object,
   // style: PropTypes.object,
-  fields: PropTypes.array.isRequired,
+  fields: PropTypes.array,
   // pristine: PropTypes.bool.isRequired,
   // submitting: PropTypes.bool.isRequired,
   // valid: PropTypes.bool.isRequired,

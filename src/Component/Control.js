@@ -8,7 +8,7 @@ import Select from './Select'
 import Switch from './Switch'
 import Button from './Button'
 import Recaptcha from './Recaptcha'
-import Condition from './Condition'
+import IsCondition from './IsCondition'
 import Color from './Color'
 
 class Control extends PureComponent {
@@ -16,88 +16,88 @@ class Control extends PureComponent {
     super(props)
 
     this.control = {
-      Switch: opt => (
-        <Condition {...opt.condition}>
+      Switch: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             {...opt}
             component={Switch}
             fullWidth
             type="checkbox"
           />
-        </Condition>
+        </IsCondition>
       ),
-      Checkbox: opt => (
-        <Condition {...opt.condition}>
+      Checkbox: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             {...opt}
             component={Checkbox}
             fullWidth
             type="checkbox"
           />
-        </Condition>
+        </IsCondition>
       ),
-      Color: opt => (
-        <Condition {...opt.condition}>
+      Color: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             {...opt}
             component={Color}
             fullWidth
           />
-        </Condition>
+        </IsCondition>
       ),
-      Radio: opt => (
-        <Condition {...opt.condition}>
+      Radio: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             component={Radio}
             fullWidth
             {...opt}
           />
-        </Condition>
+        </IsCondition>
       ),
-      TextField: opt => (
-        <Condition {...opt.condition}>
+      TextField: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             component={TextField}
             fullWidth
             {...opt}
           />
-        </Condition>
+        </IsCondition>
       ),
-      Select: opt => (
-        <Condition {...opt.condition}>
+      Select: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             component={Select}
             fullWidth
             {...opt}
           />
-        </Condition>
+        </IsCondition>
       ),
-      Button: opt => (
-        <Condition {...opt.condition}>
+      Button: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             component={Button}
             fullWidth
             values={opt.values}
             {...opt}
           />
-        </Condition>
+        </IsCondition>
       ),
-      Recaptcha: opt => (
-        <Condition {...opt.condition}>
+      Recaptcha: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             component={Recaptcha}
             fullWidth
             {...opt}
           />
-        </Condition>
+        </IsCondition>
       ),
-      Custom: opt => (
-        <Condition {...opt.condition}>
+      Custom: ({ condition, ...opt }) => (
+        <IsCondition condition={condition}>
           <Field
             fullWidth
             {...opt}
           />
-        </Condition>
+        </IsCondition>
       ),
     }
   }
@@ -109,7 +109,7 @@ class Control extends PureComponent {
       const isFunction = typeof this.control[field.type] === 'function'
 
       if (isFunction) {
-        return this.control[field.type]({ ...field })
+        return React.createElement(this.control[field.type], field)
       }
 
       console.error('Not found type:', field.type)

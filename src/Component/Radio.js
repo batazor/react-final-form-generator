@@ -1,12 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Radio from '@material-ui/core/Radio'
 
-export default React.memo(({
+const RadioField = React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
-  meta,
-  ...rest
+  // meta,
+  // ...rest
 }) => (
   <Radio
     {...rest}
@@ -17,3 +18,14 @@ export default React.memo(({
     value={value}
   />
 ))
+
+RadioField.defaultProps = {
+  // meta: null,
+}
+
+RadioField.propTypes = {
+  input: PropTypes.object.isRequired,
+  // meta: PropTypes.object,
+}
+
+export default RadioField

@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
 
-export default React.memo(({
+const SelectField = React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -27,7 +28,7 @@ export default React.memo(({
     >
       {
         (rest.option || []).map(item => (
-          <MenuItem value={item.value}>
+          <MenuItem value={item.value} key={item.label}>
             {item.label}
           </MenuItem>
         ))
@@ -35,3 +36,16 @@ export default React.memo(({
     </Select>
   </FormControl>
 ))
+
+SelectField.defaultProps = {
+  meta: null,
+  label: null,
+}
+
+SelectField.propTypes = {
+  input: PropTypes.object.isRequired,
+  meta: PropTypes.object,
+  label: PropTypes.string,
+}
+
+export default SelectField
