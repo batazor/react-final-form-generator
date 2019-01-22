@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Recaptcha from 'react-google-recaptcha'
 
-export default React.memo(({
+const RecaptchaField = React.memo(({
   input: {
     checked, value, name, onChange, ...restInput
   },
@@ -14,3 +15,14 @@ export default React.memo(({
     onChange={onChange}
   />
 ))
+
+RecaptchaField.defaultProps = {
+  meta: null,
+}
+
+RecaptchaField.propTypes = {
+  input: PropTypes.object.isRequired,
+  meta: PropTypes.object,
+}
+
+export default RecaptchaField

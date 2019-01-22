@@ -1,12 +1,12 @@
 {
   "name": "react-final-form-generator",
-  "version": "1.3.7",
+  "version": "1.4.0",
   "description": "Generating form over react-final-form",
-  "main": "dist/index.js",
+  "main": "dist/react-final-form-generator.js",
   "scripts": {
     "lint": "$(npm bin)/eslint ./src",
     "lint:fix": "$(npm bin)/eslint --fix ./src",
-    "build": "$(npm bin)/babel ./src -d lib --out-dir dist",
+    "build": "$(npm bin)/webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "$(npm bin)/start-storybook -p 9001 -c .storybook"
   },
@@ -43,25 +43,31 @@
     "@storybook/addon-actions": "^4.1.7",
     "@storybook/cli": "^4.1.7",
     "@storybook/react": "^4.1.7",
+    "babel": "^6.23.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.4",
     "prop-types": "^15.6.2",
-    "react-dom": "^16.7.0"
+    "webpack-cli": "^3.2.1"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "@material-ui/core": "^3.9.0",
+    "lodash": "^4.17.11"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.0",
     "final-form": "^4.11.0",
     "lodash": "^4.17.11",
     "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-color": "^2.17.0",
     "react-final-form": "^4.0.2",
     "react-google-recaptcha": "^1.0.5"

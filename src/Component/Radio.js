@@ -7,7 +7,7 @@ const RadioField = React.memo(({
     checked, value, name, onChange, ...restInput
   },
   // meta,
-  // ...rest
+  ...rest
 }) => (
   <Radio
     {...rest}
