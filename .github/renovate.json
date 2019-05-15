@@ -5,11 +5,5 @@
   "automerge": true,
   "major": {
     "automerge": false,
-    "minor": true,
-    "patch": true
   },
-  "packageRules": [{
-    "depTypeList": ["devDependencies"],
-    "automerge": true
-  }]
 }
