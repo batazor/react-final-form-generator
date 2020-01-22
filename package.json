@@ -69,7 +69,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-color": "^2.18.0",
-    "react-final-form": "^6.3.3",
+    "react-final-form": "^6.3.4",
     "react-google-recaptcha": "^1.1.0"
   }
 }
