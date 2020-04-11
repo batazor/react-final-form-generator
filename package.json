@@ -59,11 +59,11 @@
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "@material-ui/core": "^4.9.9",
+    "@material-ui/core": "^4.9.10",
     "lodash": "^4.17.15"
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.9",
+    "@material-ui/core": "^4.9.10",
     "final-form": "^4.19.1",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
