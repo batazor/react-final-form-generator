@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/cli": "^7.13.0",
     "@babel/core": "^7.13.1",
-    "@babel/plugin-proposal-decorators": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
     "@babel/plugin-proposal-do-expressions": "^7.12.13",
     "@babel/plugin-proposal-export-default-from": "^7.12.13",
     "@babel/plugin-proposal-function-bind": "^7.12.13",
@@ -38,7 +38,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.13.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
     "@babel/plugin-proposal-throw-expressions": "^7.12.13",
-    "@babel/preset-env": "^7.13.0",
+    "@babel/preset-env": "^7.13.5",
     "@babel/preset-react": "^7.12.13",
     "@storybook/addon-actions": "^5.3.21",
     "@storybook/cli": "^5.3.21",
