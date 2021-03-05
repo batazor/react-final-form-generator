@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "final-form": "^4.20.1",
+    "final-form": "^4.20.2",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
