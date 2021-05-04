@@ -38,7 +38,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.13.12",
     "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
     "@babel/plugin-proposal-throw-expressions": "^7.12.13",
-    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
     "@babel/preset-react": "^7.13.13",
     "@storybook/addon-actions": "^5.3.21",
     "@storybook/cli": "^5.3.21",
