@@ -48,7 +48,7 @@
     "babel-loader": "^8.2.3",
     "classnames": "^2.3.1",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
