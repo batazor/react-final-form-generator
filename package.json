@@ -40,7 +40,7 @@
     "@babel/plugin-proposal-throw-expressions": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-actions": "^6.0.0",
     "@storybook/cli": "^5.3.22",
     "@storybook/react": "^6.0.0",
     "babel": "^6.23.0",
