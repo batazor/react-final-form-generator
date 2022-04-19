@@ -45,7 +45,7 @@
     "@storybook/react": "^6.4.22",
     "babel": "^6.23.0",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.4",
+    "babel-loader": "^8.2.5",
     "classnames": "^2.3.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.1",
