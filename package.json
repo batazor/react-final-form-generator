@@ -41,7 +41,7 @@
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
     "@storybook/addon-actions": "^6.5.16",
-    "@storybook/cli": "^7.0.18",
+    "@storybook/cli": "^7.0.20",
     "@storybook/react": "^6.5.16",
     "babel": "^6.23.0",
     "babel-eslint": "^10.1.0",
