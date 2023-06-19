@@ -44,7 +44,7 @@
     "@storybook/cli": "^7.0.22",
     "@storybook/react": "^6.5.16",
     "babel": "^6.23.0",
-    "babel-eslint": "^10.1.0",
+    "@babel/eslint-parser": "^7.11.0",
     "babel-loader": "^8.3.0",
     "classnames": "^2.3.2",
     "eslint": "^6.8.0",
